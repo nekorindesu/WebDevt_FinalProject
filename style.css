@@ -26,6 +26,20 @@ body {
     font-size: 50px;
 }
 
+.ContactDetails {
+    min-height: 100vh;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.8),rgba(80, 4, 4, 0.8));
+    background-size: cover;
+    background-position: 0% 0%;
+    padding: 100px 120px;
+    font-size: 16px;
+}
+
+.ContactDetails h1{
+    padding: 30px 0px;
+    font-size: 30px;
+}
+
 .logo img{
     width: 170px; 
     height: auto; 
@@ -35,8 +49,8 @@ body {
 
 header {
     color: white;
-    background-color: rgba(0, 0, 0, 0); 
-    padding: 40px 0; 
+    background-color: #a30707; 
+    padding: 20px 0; 
     width: 100%;
     position: fixed;
     top: 0;
@@ -52,6 +66,45 @@ header {
 header.scroll {
     background-color: rgba(0, 0, 0, 0.8); 
 }
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    text-align: center;
+}
+
+
+.address, .email, .phone_number {
+    background-color: #a30707;
+    background-size: 50%;
+    border-radius: 5px;
+    border: 2px solid white;
+    padding: 50px;
+    color: white;
+    margin-top: 30px;
+}
+
+.address p{
+    font-size: 15px;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.email p{
+    font-size: 15px;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.phone_number p{
+    font-size: 15px;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+#email_icon, #address_icon, #phone_number_icon {
+    height: 50px;
+    width: 50px;
+}
+
 
 nav {
     display: flex;
@@ -99,7 +152,7 @@ header nav span a:hover::before{
 .About{
     background-color: rgb(255, 251, 251);
     color: rgb(1, 1, 1);
-    padding: 40px 120px;
+    padding: 100px 120px;
     font-size: 16px;
 }
 .About h1{
@@ -122,4 +175,50 @@ input[type="submit"] {
 input[type="submit"]:hover {
     background-color: white;
     color: black;
+}
+
+
+[class*="col-"] {
+    width: 100%;
+  }
+
+  @media only screen and (min-width: 900px) {
+    .col-s-1 {width: 8.33%;}
+    .col-s-2 {width: 16.66%;}
+    .col-s-3 {width: 25%;}
+    .col-s-4 {width: 33.33%;}
+    .col-s-5 {width: 41.66%;}
+    .col-s-6 {width: 50%;}
+    .col-s-7 {width: 58.33%;}
+    .col-s-8 {width: 66.66%;}
+    .col-s-9 {width: 75%;}
+    .col-s-10 {width: 83.33%;}
+    .col-s-11 {width: 91.66%;}
+    .col-s-12 {width: 100%;}
+    .row {
+        width: 100%;
+    }
+    
+  }
+
+    @media only screen and (min-width: 1100px) {
+        .col-1 {width: 8.33%;}
+        .col-2 {width: 16.66%;}
+        .col-3 {width: 25%;}
+        .col-4 {width: 33.33%;}
+        .col-5 {width: 41.66%;}
+        .col-6 {width: 50%;}
+        .col-7 {width: 58.33%;}
+        .col-8 {width: 66.66%;}
+        .col-9 {width: 75%;}
+        .col-10 {width: 83.33%;}
+        .col-11 {width: 91.66%;}
+        .col-12 {width: 100%;}
+        #column {
+            float: left;
+            width: 33.3%;
+            margin-bottom: 16px;
+            padding: 0 8px;
+            text-align: center;
+        }
 }

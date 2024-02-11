@@ -1,3 +1,4 @@
+/* Web Development - Final Project || BSIT 3-1 || Magno, Katherine | Nilooban, Nathaniel | Tegio, Irish */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
 *{
     margin: 0;
@@ -6,8 +7,6 @@
     font-family: 'Poppins', sans-serif;
 }
 
-
-/* BODY */
 body {
     overflow:hidden;
     background-image: linear-gradient(rgba(52, 2, 2, 0.8),rgba(142, 136, 136, 0.8)), url(PUP.jpg);
@@ -18,24 +17,21 @@ body {
 }
 
 @media screen and (max-width: 600px) {
-    /* Styles for screens up to 600px wide */
     .container {
-        width: 100%; /* Full width for small screens */
+        width: 100%;
         
     }
 }
 
 @media screen and (min-width: 601px) and (max-width: 1200px) {
-    /* Styles for screens between 601px and 1200px wide */
     .container {
-        width: 100%; /* Adjust width for medium screens */
+        width: 100%;
     }
 }
 
 @media screen and (min-width: 1201px) and (max-width: auto) {
-    /* Styles for screens larger than 1200px wide */
     .container {
-        width: 100%; /* Maintain a maximum width for larger screens */
+        width: 100%;
     }
 }
 
@@ -56,13 +52,13 @@ p{
     font-style: italic;
 }
 
-/* NAVIGATION */
-#nav2{  /*home, about, contact*/
+#nav2{  
     color: white;
     font-size: 20px;
     padding: 15px 30px;
     text-align: center
 }
+
 #nav2 {
     padding: 10px 5px;
     width: 100%;
@@ -92,7 +88,6 @@ nav {
     overflow:hidden;
 }
 
-/* NAV SECTIONS*/
 nav a {
     display: block;
     color: white;
@@ -122,8 +117,8 @@ section {
     border: 2px solid white;
     border-radius: 8px;
     padding: 20px;
-    display: none; /* Hide all sections initially */
-    display: block; /* Set Section 1 to be displayed by default */
+    display: none; 
+    display: block; 
     margin-top: 14px; 
     margin-right: 20px;
     margin-left: 300px;
@@ -133,8 +128,6 @@ section {
     overflow-y: auto;
 }
 
-
-/* H1 */
 h1 {
     text-align: center;
     color:white;
@@ -172,7 +165,7 @@ label {
 }
 
 .gender-section input[type="radio"]{
-    margin-left:50px;
+    margin-left:30px;
 }
 
 .gender-section label {
@@ -241,4 +234,8 @@ input[type="submit"] {
 
 input[type="submit"]:hover {
     background-color:#c09d00;
+}
+
+input:focus {
+    background-color: #dddddd;
 }

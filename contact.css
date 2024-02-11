@@ -1,3 +1,4 @@
+/* Web Development - Final Project || BSIT 3-1 || Magno, Katherine | Nilooban, Nathaniel | Tegio, Irish */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
 *{
     margin: 0;
@@ -45,7 +46,6 @@ h1 {
     padding: 0 8px;
     text-align: center;
 }
-
 
 .address, .email, .phone_number {
     background-color: #a30707;
@@ -118,6 +118,7 @@ nav span a {
         transform: translateX(0%);
     } 
 }
+
 header nav span a::before{
     content: "";
     background-color: white;
@@ -129,6 +130,7 @@ header nav span a::before{
     display: none;
     animation: beforeAnimate .5s;
 }
+
 header nav span a:hover::before{
     display: unset;
 }
