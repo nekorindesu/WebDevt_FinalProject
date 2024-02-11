@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/* BODY */
+body {
+    overflow:hidden;
+    background-image: linear-gradient(rgba(52, 2, 2, 0.8),rgba(142, 136, 136, 0.8)), url(PUP.jpg);
+    background-size: cover;
+    min-height: 100vh;
+    background-position: 50% 100%;
+    margin: 80px;
+}
+
+@media screen and (max-width: 600px) {
+    /* Styles for screens up to 600px wide */
+    .container {
+        width: 100%; /* Full width for small screens */
+        
+    }
+}
+
+@media screen and (min-width: 601px) and (max-width: 1200px) {
+    /* Styles for screens between 601px and 1200px wide */
+    .container {
+        width: 100%; /* Adjust width for medium screens */
+    }
+}
+
+@media screen and (min-width: 1201px) and (max-width: auto) {
+    /* Styles for screens larger than 1200px wide */
+    .container {
+        width: 100%; /* Maintain a maximum width for larger screens */
+    }
+}
+
+h1{
+    color: white;
+    font-size:50px;
+    margin-top:50px;
+    text-align:center;
+}
+h2 {
+    color: white;
+    font-size:20px;
+    margin-top:10px;
+    text-align:left;
+}
+p{
+    font-family:'Roboto Thin', Arial, sans-serif;
+    font-style: italic;
+}
+
+/* NAVIGATION */
+#nav2{  /*home, about, contact*/
+    color: white;
+    font-size: 20px;
+    padding: 15px 30px;
+    text-align: center
+}
+#nav2 {
+    padding: 10px 5px;
+    width: 100%;
+    text-align: center
+}
+
+#nav2 ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#nav2 li, a{
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 10px 12px;
+    text-decoration: none;
+}
+
+nav {
+    overflow: auto;
+    position: fixed;
+    top: 145px;
+    padding: 5px;
+    height: 100%;
+    border-top-right-radius: 4px;
+    overflow:hidden;
+}
+
+/* NAV SECTIONS*/
+nav a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    margin-top:15px;
+    margin-bottom: 8px;
+    cursor: pointer;
+    background-color: #a30707;
+    border-radius: 5px;
+    border: 2px solid white;
+}
+
+nav a:hover {
+    background-color:rgb(109, 0, 0);
+    color:#ddd;
+}
+
+nav a:active {
+    background-color:rgb(109, 0, 0);
+    color:#ddd;
+}
+
+section {
+    background-color:#a30707;
+    border: 2px solid white;
+    border-radius: 8px;
+    padding: 20px;
+    display: none; /* Hide all sections initially */
+    display: block; /* Set Section 1 to be displayed by default */
+    margin-top: 14px; 
+    margin-right: 20px;
+    margin-left: 300px;
+    margin-bottom: 150px;
+    max-height: calc(100vh - 300px);
+    overflow-y: scroll;
+    overflow-y: auto;
+}
+
+
+/* H1 */
+h1 {
+    text-align: center;
+    color:white;
+    margin-top: 50px;
+    white-space: nowrap;
+}
+
+.container {
+    border-radius: 8px;
+    margin-bottom: 50px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+.column {
+    display: flex;
+    column-gap: 20px;
+  }
+  
+.column-section {
+    flex: 1;
+}
+
+label {
+    margin-top: 10px;
+}
+
+.gender-section{
+    display:inline-flex;
+    align-items: baseline;
+}
+
+.gender-section input[type="radio"]{
+    margin-left:50px;
+}
+
+.gender-section label {
+    margin-bottom: 0;
+    margin-left: 5px;
+}
+
+.status-section{
+    display:inline-flex;
+    align-items: baseline;
+
+}
+.status-section input[type="radio"]{
+    margin-left: 70px;
+    margin-top: 30px;
+}
+
+.status-section label {
+    margin-bottom: 0;
+    margin-left: 5px;
+}
+
+.club-section{
+    display:inline-flex;
+    align-items: baseline;
+
+}
+.club-section input[type="checkbox"]{
+    margin-left: 100px;
+}
+
+.club-section label {
+    margin-bottom: 0;
+    margin-left: 5px;
+}
+
+.org-section{
+    display:inline-flex;
+    align-items: baseline;
+
+}
+.org-section input[type="checkbox"]{
+    margin-left: 40px;
+}
+
+.org-section label {
+    margin-bottom: 0;
+    margin-left: 5px;
+}
+
+input, select {
+    box-sizing: border-box;
+    margin-bottom: 15px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+}
+
+input[type="submit"] {
+    background-color:#f5c801;
+    color:#000000;
+    cursor: pointer;
+    border: none;
+}
+
+input[type="submit"]:hover {
+    background-color:#c09d00;
+}

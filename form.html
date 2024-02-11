@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title> Student Information Form </title>
+    <link rel="stylesheet" href="formstyle.css">
+    <script src="formjs.js"> </script>
+</head>
+
+<body>
+    <h1> Individual Inventory Record Form </h1>
+    
+    <div id="nav2">
+        <tr>
+            <td><a href="index.html">Home</a></td>
+            <a href="index.html#About">About</a>
+            <a href="contact.html">Contact</a>
+        </tr>
+    </div>
+
+    <br>
+
+    <nav>
+        <br><br><br><br>
+        <a onclick="toggleSection('section1')"> Personal Information </a>
+        <a onclick="toggleSection('section2')"> Home and Family Background </a>
+        <a onclick="toggleSection('section3')"> Interests and Hobbies </a>
+    </nav>
+
+    <section id="section1">
+        <div class="section1">
+            <form name="Personal Information" id="pi" method="post" action="https://script.google.com/macros/s/AKfycbztJwM0ciJn3R-0Kfk-qMQ7NFDbcZxA1qSxisKwQtWgv9ZcZJLg1FUJc6c6Fz4ofzrV/exec" onsubmit="return PIValidateAndRedirect()">
+                <!-- ROW 1 -->
+                <p>Please provide honest and accurate information by answering or choosing the most appropriate answers or options. Kindly leave optional fields blank if not applicable.</p>
+                <label> Name </label>
+                <div class="column">
+                    <input type="text" name="First Name" id="fname" placeholder="First Name" required>
+                    <input type="text" name="Middle Name" id="mname" placeholder="Middle Name (optional)">
+                    <input type="text" name="Surname" id="sname" placeholder="Surname" required>
+                </div>
+                
+                <!-- ROW 2 -->
+                <div class = "column">
+                    <div class = "column-section">
+                        <label for="Age"> Age </label>
+                        <input type="number" name="Age" id="age" placeholder="Age" min="1" max="99" maxlength="2" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" required>
+                    </div>
+                
+                    <div class="column-section">
+                        <label> Gender </label> <br>
+                        <div class="gender-section">
+                            <input type="radio" name="Gender" id="m" value="Male">
+                            <label for="Male"> Male </label>
+
+                            <input type="radio" name="Gender" id="f" value="Female">
+                            <label for="Female"> Female </label>
+                        </div>
+                    </div>
+                </div>         
+                
+                <!-- ROW 3 -->
+                <div class="column">
+                    <div class="column-section">
+                        <label> Date of Birth </label>
+                        <input type="date" name="Birthday" id="bday" max="today" required>
+                    </div>
+                    
+                    <div class="column-section">
+                        <label> Place of Birth </label>
+                        <input type="text" name="Place of Birth" id="bplace" placeholder="Place of Birth" required>
+                    </div>
+                </div>
+                
+
+                <!-- ROW 4 -->
+                <div class="column">
+                    <div class="column-section">
+                        <label for="Civil Status"> Civil Status </label>
+                        <select name="Civil Status" id="cstatus">
+                            <option value="Select" disabled selected> Please choose your civil status </option>
+                            <option value="Single"> Single </option>
+                            <option value="Married"> Married </option>
+                            <option value="Separated"> Separated </option>
+                            <option value="Widowed"> Widowed </option>
+                        </select>
+                    </div>
+
+                    <div class="column-section">
+                        <label> Religion </label>
+                        <input type="text" name="Religion" id="religion" placeholder="Religion" required>
+                    </div>
+                </div>
+
+                <!-- ROW 5 -->
+                <label> Course, Year and Section </label>
+                <div class="column"> 
+                    <input type="text" name="Course" id="course" placeholder="Course (e.g., BSIT)" required>
+                    <input type="text" name="Year" id="year" placeholder="Year (e.g., 1st)" required>
+                    <input type="text" name="Section" id="section" placeholder="Section (e.g., 1)" required>
+                </div>
+
+                <!-- ROW 6 -->
+                <div class="column">
+                    <div class="column-section">
+                        <label> Height </label>
+                        <input type="number" name="Height" id="height" step=".05" placeholder="Height (cm)" min="100" max="200" required>
+                    </div>
+                    <div class="column-section">
+                        <label> Weight </label>
+                        <input type="number" name="Weight" id="weight" step=".05" placeholder="Weight (kg)" min="30" max="100" required>
+                    </div>
+                    <div class="column-section">
+                        <label for="Complexion"> Complexion </label>
+                        <select name="Complexion" id="complexion">
+                            <option value="Select" disabled selected> Please choose your skin complexion </option>
+                            <option value="Very Fair"> Very Fair </option>
+                            <option value="Fair"> Fair </option>
+                            <option value="Medium"> Medium </option>
+                            <option value="Light Brown"> Light Brown </option>
+                            <option value="Brown"> Brown </option>
+                            <option value="Black"> Black </option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- ROW 7 -->
+                <label> Addresses </label>
+                <div class="column">
+                    <input type="text" name="City Address" id="cadd" placeholder="City Address" required>
+                    <input type="text" name="Provincial Address" id="padd" placeholder="Provincial Address (optional)">
+                </div>
+
+                <!-- ROW 8 -->
+                <div class="column">
+                    <div class="column-section">
+                        <label> Email Address </label>
+                        <input type="email" name="Email Address" id="email" placeholder="Input Personal Email" size="40" required>
+                    </div>
+                    <div class="column-section">
+                        <label> Telephone Number </label>
+                        <input type="tel" name="Telephone No." id="telno" placeholder="(02) xxxx-xxxx (optional)">
+                    </div>
+                    <div class="column-section">
+                        <label> Mobile Number </label>
+                        <input type="tel" name="Mobile No." id="mobno" placeholder="09xxxxxxxxx" required>
+                    </div>
+                </div>
+
+                <!-- ROW 9 -->
+                <label> Person to be contacted in case of accident or serious illness </label>
+                <input type="text" name="Emergency Contact" id="emercon" placeholder="First Name Surname" required>
+
+                <!-- ROW 10 -->
+                <div class="column">
+                    <div class="column-section">
+                        <label> Address </label>
+                        <input type="text" name="Address" id="add" placeholder="Address" required>
+                    </div>
+                    <div class="column-section">
+                        <label> Mobile Number </label>
+                        <input type="tel" name="Mobile Number" id="mobnum" placeholder="09xxxxxxxxx" required>
+                    </div>
+                    <div class="column-section">
+                        <label> Relationship </label>
+                        <input type="text" name="Relationship" id="rel" placeholder="Relationship" required>
+                    </div>
+                </div>
+
+                <input type="submit" value="Submit and Next Part">
+            </form>
+        </div>
+    </section>
+
+
+    <section id="section2">
+        <div class="section2">
+            <form name="Home and Family Background" id="hfb" method="post" action="https://script.google.com/macros/s/AKfycbztNAoIy1KPdlZ-3VkpAemI808aZ7uZJbNWNLxaV-GwtQdanmfIPUhUfx_0dSrSZyjP/exec" onsubmit="return HFBValidateAndRedirect()">
+                <p>Please provide honest and accurate information by answering or choosing the most appropriate answers or options. Kindly leave optional fields blank if not applicable.</p> <br>
+                <!-- Father's Information -->
+                <div class="column">
+                    <div class="column-section">
+                        <label> Name of Father: </label>
+                        <input type="text" name="Father's Name" id="father-name" placeholder="Father's Name" required>
+                    </div>
+                    <div class="column-section">
+                        <label> Age: </label>
+                        <input type="number" name="Father's Age" id="father-age" placeholder="Father's Age" min="1" max="99" maxlength="2" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="2" required>
+                    </div>
+                    <div class="status-section">
+                        <input type="radio" name="Father's Status" id="father-living" value="Living">
+                        <label for="father-living"> Living </label>
+        
+                        <input type="radio" name="Father's Status" id="father-deceased" value="Deceased">
+                        <label for="father-deceased"> Deceased </label>
+                    </div>
+                </div>
+        
+                <div class="column">
+                    <div class="column-section">
+                        <label for="Father's Education"> Educational Attainment </label>
+                        <select name="Father's Education" id="father-education">
+                            <option value="Select" disabled selected> Please choose your father's educational attainment </option>
+                            <option value="College Graduate"> College Graduate </option>
+                            <option value="College Level"> College Level </option>
+                            <option value="High School Graduate"> High School Graduate </option>
+                            <option value="High School Level"> High School Level </option>
+                            <option value="Elementary Graduate"> Elementary Graduate </option>
+                            <option value="Elementary Level"> Elementary Level </option>
+                            <option value="No Formal Schooling"> No Formal Schooling </option>
+                        </select>
+                    
+                    </div>
+                    <div class="column-section">
+                        <label> Occupation: </label>
+                        <input type="text" name="Father's Occupation" id="father-occupation" placeholder="Father's Occupation" required>
+                    </div>
+                </div>
+      
+                <!-- Mother's Information -->
+                <div class="column">
+                    <div class="column-section"> 
+                        <label> Name of Mother: </label>
+                        <input type="text" name="Mother's Name" id="mother-name" placeholder="Mother's Name" required>
+                    </div>
+                    <div class="column-section"> 
+                        <label> Age: </label>
+                        <input type="number" name="Mother's Age" id="mother-age" placeholder="Mother's Age" min="1" max="99" maxlength="2" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="2" required>
+                    </div>
+                    <div class="status-section"> 
+                        <input type="radio" name="Mother's Status" id="mother-living" value="Living"> 
+                        <label for="mother-living"> Living </label>
+        
+                        <input type="radio" name="Mother's Status" id="mother-deceased" value="Deceased"> 
+                        <label for="mother-deceased"> Deceased </label>
+                    </div>
+                </div>
+        
+                <div class="column">
+                    <div class="column-section">
+                        <label for="Mother's Education"> Educational Attainment </label>
+                        <select name="Mother's Education" id="mother-education">
+                            <option value="Select" disabled selected> Please choose your mother's educational attainment </option>
+                            <option value="College Graduate"> College Graduate </option>
+                            <option value="College Level"> College Level </option>
+                            <option value="High School Graduate"> High School Graduate </option>
+                            <option value="High School Level"> High School Level </option>
+                            <option value="Elementary Graduate"> Elementary Graduate </option>
+                            <option value="Elementary Level"> Elementary Level </option>
+                            <option value="No Formal Schooling"> No Formal Schooling </option>
+                        </select>
+                    
+                    </div>
+                    <div class="column-section">
+                        <label> Occupation: </label>
+                        <input type="text" name="Mother's Occupation" id="mother-occupation" placeholder="Mother's Occupation" required>
+                    </div>
+                </div>
+                
+                <!-- Guardian's Information -->
+                <div class="column">
+                    <div class="column-section"> 
+                        <label> Name of Guardian: </label>
+                        <input type="text" name="Guardian's Name" id="guardian-name" placeholder="Guardian's Name (optional)">
+                    </div>
+                    <div class="column-section"> 
+                        <label> Age: </label> 
+                        <input type="number" name="Guardian's Age" id="guardian-age" placeholder="Guardian's Age (optional)" min="1" max="99" maxlength="2" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="2">
+                    </div>
+                    <div class="column-section"> 
+                        <label> Relation: </label>
+                        <input type="text" name="Guardian's Relation" id="guardian-relation" placeholder="Guardian's Relation (optional)">
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="column-section"> 
+                        <label for="Guardian's Education"> Educational Attainment </label>
+                        <select name="Guardian's Education" id="guardian-education">
+                            <option value="Select" disabled selected> Please choose your guardian's educational attainment </option>
+                            <option value="College Graduate"> College Graduate </option>
+                            <option value="College Level"> College Level </option>
+                            <option value="High School Graduate"> High School Graduate </option>
+                            <option value="High School Level"> High School Level </option>
+                            <option value="Elementary Graduate"> Elementary Graduate </option>
+                            <option value="Elementary Level"> Elementary Level </option>
+                            <option value="No Formal Schooling"> No Formal Schooling </option>
+                        </select>
+                    </div>
+                    <div class="column-section"> 
+                        <label> Occupation: </label>
+                        <input type="text" name="Guardian's Occupation" id="guardian-occupation" placeholder="Guardian's Occupation (optional)">
+                    </div>
+                </div>
+                
+                <!-- Parents' Marital Relationship -->
+                <div class="column">
+                    <div class="column-section">
+                        <label> Parents’ Marital Relationship: </label> 
+                        <select name="Marital Relationship" id="mrelationship">
+                            <option value="Select" disabled selected> Please choose Parent's Marital Relationship </option>
+                            <option value="Single Parent"> Single Parent </option>
+                            <option value="Married and Staying Together"> Married and Staying Together</option>
+                            <option value="Married but Separated"> Married but Separated</option>
+                            <option value="Not Married but Living Together">Not Married but Living Together</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <!-- Sibling Information -->
+                <div class="column">
+                    <div class="column-section">
+                        <label> No. of children in the family: </label>
+                        <input type="number" name="Total Children" id="total-children" placeholder="Total Children" min="1" required>
+                    </div>
+                    <div class="column-section">
+                        <label> Number of Brother/s: </label>
+                        <input type="number" name="Brothers Count" id="brothers-count" placeholder="Number of Brother/s" min="0" required>
+                    </div>
+                    <div class="column-section">
+                        <label> Number of Sister/s: </label>
+                        <input type="number" name="Sisters Count" id="sisters-count" placeholder="Number of Sister/s" min="0" required>
+                    </div>
+                </div>
+                <div class="column"> 
+                    <div class="column-section">
+                        <label> Number of brother/s or sister/s gainfully employed? </label>
+                        <input type="number" name="Employed Siblings Count" id="employed-siblings-count" placeholder="Number of employed siblings" required> <br>
+                        <label> Ordinal Position: </label>
+                        <input type="text" name="Ordinal Position" id="ordinal-position" placeholder="Ordinal Position (e.g., 1st child)" required>
+                    </div>
+                </div>
+                
+                <input type="submit" value="Submit and Next Part">
+            </form>
+        </div>
+    </section>
+    
+    <section id="section3">
+        <div class="section3">
+            <form name="Academic and Extra-Curricular" id="academic-extra" method="post" action="https://script.google.com/macros/s/AKfycbyGSD7czChhRkJpCjGKNODKdNnSVm_nGpF6fln4gMhbNR4myGYsL004Wkrpnqg3BU5l/exec" onsubmit="return IHValidateAndRedirect()">
+                <h2>A. Academic</h2>
+                <div class="column">
+                    <div class="club-section">
+                        <input type="checkbox" name="Math Club" id="math-club">
+                        <label for="math-club"> Math Club </label>
+                        <input type="checkbox" name="Science Club" id="science-club">
+                        <label for="science-club"> Science Club </label>
+                        <input type="checkbox" name="Debating Club" id="debating-club">
+                        <label for="debating-club"> Debating Club </label>
+                        <input type="checkbox" name="Quizzers Club" id="quizzers-club">
+                        <label for="quizzers-club"> Quizzers Club </label>
+                    </div>
+                </div>
+                
+                <div class="column">
+                    <div class="column-section"><br>
+                        <label for="others-club"> Others, please specify: </label>
+                        <input type="text" name="Others Club Text" id="others-club-text">
+                    </div>
+                </div>
+
+                <h2>B. Extra-Curricular</h2>
+                <div class="column">
+                    <div class="column-section">
+                        <label>What are your hobbies? Write them in the order of your preferences.</label>
+                        <input type="text" name="Hobby 1" id="hobby1">
+                        <input type="text" name="Hobby 2" id="hobby2">
+                        <input type="text" name="Hobby 3" id="hobby3">
+                        <input type="text" name="Hobby 4" id="hobby4">
+                        <br>
+                    </div>
+                </div>
+
+                <div class="column">
+                    <div class="column-section">
+                        <label>Which of the following organizations have you participated in and which interest you most? (Please specify)</label>
+
+                        <div class="org-section">
+                            <input type="checkbox" name="Athletics" id="athletics">
+                            <label for="athletics"> Athletics </label>
+                            <input type="checkbox" name="Religious Organization" id="religious-org">
+                            <label for="religious-org"> Religious organization </label>
+                            <input type="checkbox" name="Glee Club" id="glee-club">
+                            <label for="glee-club"> Glee Club </label>
+                            <input type="checkbox" name="Dramatics" id="dramatics">
+                            <label for="dramatics"> Dramatics </label>
+                            <input type="checkbox" name="Chess Club" id="chess-club">
+                            <label for="chess-club"> Chess Club </label>
+                            <input type="checkbox" name="Scouting" id="scouting">
+                            <label for="scouting"> Scouting </label>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="column">
+                    <div class="column-section">
+                        <label for="others-org"> Others, please specify: </label>
+                        <input type="text" name="Others Organization Text" id="others-org-text">
+                    </div>
+                </div>
+
+                <div class="column">
+                    <div class="column-section">
+                        <label>Occupational position in the organization:</label>
+
+                        <div class="org-section">
+                            <input type="checkbox" name="Organization Officer" id="org-officer">
+                            <label for="org-officer"> Officer </label>
+                            <input type="checkbox" name="Organization Member" id="org-member">
+                            <label for="org-member"> Member </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="column">
+                    <div class="column-section">
+                            <label for="others-org-position"> Others, please specify: </label>
+                            <input type="text" name="Others Organization Position Text" id="others-org-position-text">
+                     </div>
+                </div>
+
+                <input type="submit" value="Save">
+            </form>
+        </div>
+    </section>
+    
+
+    </html>
